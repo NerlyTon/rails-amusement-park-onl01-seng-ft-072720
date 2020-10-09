@@ -1,0 +1,10 @@
+<% @attractions.each do |attraction| %>
+    <%= link_to "Show #{attraction.name}", attraction_path(attraction) if admin? %><br>
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) if !admin? %><br>
+    Tickets Required:<%= attraction.tickets %><br><br><br><br>
+    
+    
+  
+    <% end %>
+
+    <%= link_to "New Attraction", new_attraction_path if admin? %><br><br><br>

@@ -1,0 +1,3 @@
+rails g model Attraction name tickets:integer nausea_rating:integer happiness_rating:integer min_height:integer --no-test-framework
+rails g migration CreateRides user:belongs_to attraction:belongs_to --no-test-framework
+rails g model User name password_digest nausea:integer happiness:integer tickets:integer height:integer admin:boolean --no-test-framework
